@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Jujutsu Kaisen Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function viewImage(src) {
+            let viewer = document.getElementById('imageViewer');
+            let viewerImg = document.getElementById('viewerImg');
+            viewer.style.display = 'flex';
+            viewerImg.src = src;
+        }
+        function closeViewer() {
+            document.getElementById('imageViewer').style.display = 'none';
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        #imageViewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        #imageViewer img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 2px solid white;
+        }
+        #imageViewer button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jujutsu Kaisen Image Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Click an image to view</h2>
+        <img src="gojo2.jfif" alt="Gojo Satoru" onclick="viewImage(this.src)">
+        <img src="gojo3.jfif" alt="Gojo Satoru" onclick="viewImage(this.src)">
+        <img src="gojo4.jfif" alt="Gojo Satoru" onclick="viewImage(this.src)">
+        <img src="gojo5.jfif" alt="Gojo Satoru" onclick="viewImage(this.src)">
+
+
+        
+
+        <img src="suk1.jfif" alt="Sukuna" onclick="viewImage(this.src)">
+        <img src="suk2.jfif" alt="Sukuna" onclick="viewImage(this.src)">
+        <img src="suk3.jfif" alt="Sukuna" onclick="viewImage(this.src)">
+        <img src="suk4.jfif" alt="Sukuna" onclick="viewImage(this.src)">
+
+
+
+
+        <img src="me2.jfif" alt="Megumi Fushiguro" onclick="viewImage(this.src)">
+        <img src="meg1.jfif" alt="Megumi Fushiguro" onclick="viewImage(this.src)">
+        <img src="meg3.jfif" alt="Megumi Fushiguro" onclick="viewImage(this.src)">
+        <img src="meg4.jfif" alt="Megumi Fushiguro" onclick="viewImage(this.src)">
+
+
+
+
+        <img src="yoto1.jfif" alt="Yuta Okkotsu" onclick="viewImage(this.src)">
+        <img src="yoto2.jfif" alt="Yuta Okkotsu" onclick="viewImage(this.src)">
+        <img src="yoto3.jfif" alt="Yuta Okkotsu" onclick="viewImage(this.src)">
+        <img src="yoto4.jfif" alt="Yuta Okkotsu" onclick="viewImage(this.src)">
+    </section>
+
+    <div id="imageViewer">
+        <button onclick="closeViewer()">Close</button>
+        <img id="viewerImg" src="">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jujutsu Kaisen Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
